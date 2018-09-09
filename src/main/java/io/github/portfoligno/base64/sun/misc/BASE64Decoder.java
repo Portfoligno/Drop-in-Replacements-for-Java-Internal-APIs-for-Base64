@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Base64;
 
 public class BASE64Decoder extends CharacterDecoder {
-  private final @NotNull Base64.Decoder delegate = Base64.getDecoder();
+  private final @NotNull Base64.Decoder delegate = Base64.getMimeDecoder();
 
   @Override
   public @NotNull byte[] decodeBuffer(@NotNull String inputString) throws IOException {
